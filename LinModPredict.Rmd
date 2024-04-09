@@ -90,6 +90,9 @@ predict(model.3, target, interval=c("confidence"))
 anova(model.1, model.3)
 ```
 
+From the previous comparison, the p-value when comparing model, one with model three was very small. It equaled 4.994e-06. This tells us that model three is better than model one, In addition, the residual sum of squares between the two models shows that model three is more accurate than model one by 30 points.
+
+
 
 ### Compare Model 2 with Model 3 using anova 
 
@@ -97,4 +100,8 @@ anova(model.1, model.3)
 ```{r}
 anova(model.2, model.3)
 ```
+
+
+
+
 
