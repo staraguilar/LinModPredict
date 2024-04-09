@@ -16,3 +16,17 @@ require(lubridate)
 data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_strength/data.txt",sep="",header=TRUE)
 ```
 
+
+
+# Model 1 is SIMS~ARM
+
+### Scattered Plot 
+
+```{r}
+basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
+```
+
+
+```{r}
+basicNN + geom_point()
+```
