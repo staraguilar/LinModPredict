@@ -23,18 +23,27 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 ### Scattered Plot 
 
 ```{r}
-basicNN <- ggplot(data,aes(y=SIMS,x=ARM))
+basicARM <- ggplot(data,aes(y=SIMS,x=ARM))
 ```
 
 
 ```{r}
-basicNN + geom_point() + ggtitle("SIMS vs ARM") + theme(plot.title = element_text(hjust = 0.5, size = 20)) + geom_smooth(method=lm)
+basicARM + geom_point() + ggtitle("SIMS vs ARM") + theme(plot.title = element_text(hjust = 0.5, size = 20)) + geom_smooth(method=lm)
 ```
+```{r}
+model.1 <- lm(SIMS~ARM, data=data)
+```
+
+
 
 ```{r}
-basicNN + geom_point(aes(col=Sex)) + geom_smooth(method=lm)
+target<-data.frame(ARM = 88, GRIP =  94)
 ```
 
 
+
+```{r}
+predict(model.1, target, interval=c("prediction"))
+```
 
 
