@@ -59,5 +59,12 @@ basicGRIP <- ggplot(data,aes(y=SIMS,x=GRIP))
 basicGRIP + geom_point() + ggtitle("SIMS vs GRIP") + theme(plot.title = element_text(hjust = 0.5, size = 20)) + geom_smooth(method=lm)
 ```
 
+```{r}
+model.2 <- lm(SIMS~GRIP, data=data)
+```
 
+
+```{r}
+predict(model.2, target, interval=c("prediction"))
+```
 
