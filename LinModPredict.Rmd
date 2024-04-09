@@ -101,6 +101,7 @@ From the previous comparison, the p-value when comparing model, one with model t
 anova(model.2, model.3)
 ```
 
+From the previous comparison, the p-value when comparing model two with model three was very small. It equaled 1.495e-09. This tells us that model three is better than model two, In addition, the residual sum of squares between the two models shows that model three is more accurate than model two by 55 points.
 
 
 
