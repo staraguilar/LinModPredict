@@ -84,3 +84,12 @@ predict(model.3, target, interval=c("prediction"))
 predict(model.3, target, interval=c("confidence"))
 ```
 
+### Compare Model 1 with Model 3 using anova 
+
+```{r}
+anova(model.1, model.3)
+```
+
+
+
+
