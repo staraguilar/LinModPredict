@@ -68,3 +68,19 @@ model.2 <- lm(SIMS~GRIP, data=data)
 predict(model.2, target, interval=c("prediction"))
 ```
 
+# Model 3 is SIMS~ARM+GRIP
+
+```{r}
+model.3 <- lm(SIMS~ARM+GRIP, data=data)
+summary.lm(model.3)
+```
+
+
+```{r}
+predict(model.3, target, interval=c("prediction"))
+```
+
+```{r}
+predict(model.3, target, interval=c("confidence"))
+```
+
