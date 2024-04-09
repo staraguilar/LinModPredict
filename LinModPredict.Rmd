@@ -104,5 +104,15 @@ anova(model.2, model.3)
 From the previous comparison, the p-value when comparing model two with model three was very small. It equaled 1.495e-09. This tells us that model three is better than model two, In addition, the residual sum of squares between the two models shows that model three is more accurate than model two by 55 points.
 
 
+### Compare Model 1 with Model 2 using anova 
+
+
+```{r}
+anova(model.1, model.2)
+```
+
+From the previous comparison, we couldnt get a p-value, because the two models are not nested as one have ARM/GRIP and the other doesn't. Therefore, there is no basis for comparison. However, from the residual sum of squares, we can see that model one is more accurate as it has lower sum of square errors. 
+
+
 
 
